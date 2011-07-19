@@ -1,0 +1,133 @@
+/* $This file is distributed under the terms of the license in /doc/license.txt$ */
+
+/* <------ INDIVIDUAL INTRO FOR PERSON*/
+#individual-intro.person {
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+}
+#individual-intro.person #individual-info {
+    float: left;
+    width: 78%;
+    margin-bottom: 20px;
+}
+#individual-intro.person .individual-overview {
+    width: 100%;
+    float: none;
+}
+ul#individual-tools-people {
+    margin-top: 5px;
+    height: 20px;
+    padding-bottom: 20px;
+    list-style-type: none;
+    clear: both;
+    margin-bottom: 15px;
+}
+ul#individual-tools-people li {
+    position: relative;
+    display: block;
+    padding-right: 7px;
+    float: left;
+    margin-bottom: 20px;
+}
+ul.individual-urls-people {
+    clear: both;
+    list-style-type: circle;
+    padding-left: 24px;
+}
+ul.individual-urls-people li {
+    font-size: .875em;
+    line-height: 1.3em;
+}
+/* <------ INDIVIDUAL CORE:OVERVIEW */
+#overview {
+    clear: left;
+}
+.overview-value {
+    display: inline;
+}
+div.overview-value :last-child {
+    margin-bottom: .2em;
+}
+.individual-overview {
+    font-size: 1em;
+    padding-bottom: 0;
+    line-height: 1.3em;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 100%;
+}
+/* <------ INDIVIDUAL TEMPORAL GRAPH */
+#temporal-graph {
+    padding: 0 3px 20px 0;
+    background-color: #fff;
+}
+#temporal-graph h3 {
+    margin: 0;
+    padding: 0;
+}
+#temporal-graph h3 img {
+    padding-right: 10px;
+    vertical-align: text-top;
+}
+
+/* <------ INDIVIDUAL MAP O' SCIENCE */
+#map-of-science {
+    padding: 0 3px 20px 0;
+    background-color: #fff;
+}
+#map-of-science h3 {
+    margin: 0;
+    padding: 0;
+}
+#map-of-science h3 img {
+    padding-right: 10px;
+    vertical-align: text-top;
+}
+
+/* <------ POSITIONS */
+ul#individual-personInPosition {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+ul#individual-personInPosition li {
+    line-height: 1em;
+}
+ul#individual-personInPosition li:last-child {
+    padding-bottom: 15px;
+}
+
+/* <------ RESEARCH AREA */
+ul#individual-hasResearchArea {
+    padding-bottom: 24px;
+}
+ul#individual-hasResearchArea li {
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #5e6363;
+}
+ul#individual-hasResearchArea li:first-child {
+    padding-left: 0;
+}
+
+/* <------ QR Code */
+h5.qrCode {
+    margin-top: 1em;
+    padding: 0;
+}
+span#qrCodeImage {
+    position: absolute;
+    top: -9em;
+    left: 2em;
+    border: solid 1px #ccc;
+    background: white;
+}
+span#qrCodeImage img {
+    padding: 1.7em 1.7em 0 1.7em;
+}
+a.qrCloseLink {
+    float: right;
+    margin-right: .5em;
+    font-size: .8em;
+}
