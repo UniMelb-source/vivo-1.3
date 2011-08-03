@@ -1406,6 +1406,7 @@ article.property ul.property-list li a {
 /* MISCELLANEOUS ------>  */
 .grey {
     color: #5e6363;
+	background-color: #fff;
 }
 .displace {
     position: absolute;
