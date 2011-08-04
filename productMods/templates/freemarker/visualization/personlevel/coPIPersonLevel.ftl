@@ -112,7 +112,7 @@ $(document).ready(function(){
 });
 </script>
 
-
+</div>
 <div id="body">
     <div id="ego_profile">
             
@@ -164,15 +164,15 @@ $(document).ready(function(){
             
     <#if (numOfCoInvestigations?? && numOfCoInvestigations > 0) || (numOfInvestigators?? && numOfInvestigators > 0) >
     
-        <div id="bodyPannel">
-            <div id="visPanel">
+        <div id="bodyPannel" class="col-8">
+            <div id="visPanel" class="col-6">
                 <script language="JavaScript" type="text/javascript">
                     <!--
                     renderCollaborationshipVisualization();
                     //-->
                 </script>
             </div>
-            <div id="dataPanel">
+            <div id="dataPanel" class="col-2">
                 <h4 id ="profileTitle">Profile</h4>
                     
                 <div id="data-panel-content">
