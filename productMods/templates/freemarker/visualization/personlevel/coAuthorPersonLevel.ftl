@@ -113,7 +113,7 @@ $(document).ready(function(){
 </script>
 
 
-
+</div>
 <div id="body">
     <div id="ego_profile">
     
@@ -165,15 +165,15 @@ $(document).ready(function(){
             
     <#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) || (numOfAuthors?? && numOfAuthors > 0) >
     
-        <div id="bodyPannel">
-            <div id="visPanel">
+        <div id="bodyPannel" class="col-8">
+            <div id="visPanel" class="col-6">
                 <script language="JavaScript" type="text/javascript">
                     <!--
                     renderCollaborationshipVisualization();
                     //-->
                 </script>
             </div>
-            <div id="dataPanel">
+            <div id="dataPanel" class="col-2">
                 <h4 id ="profileTitle">Profile</h4> 
                 
                 <div id="data-panel-content">
@@ -194,7 +194,7 @@ $(document).ready(function(){
                 <div class="author_stats" id="lPub" style="visibility:hidden"><span class="numbers" style="width:40px;" id="lastPublication"></span>
                 &nbsp;&nbsp;<span>Last Publication</span></div>
                 <div id="incomplete-data">Note: This information is based solely on publications that have been loaded into the VIVO system. 
-                This may only be a small sample of the person's total work.<p></p><p></p>
+                This may only be a small sample of the persons total work.<p></p><p></p>
                 <#if user.loggedIn > 
                     Go to your profile page to enter additional details about your publications.
                 <#else> 
@@ -202,56 +202,56 @@ $(document).ready(function(){
                 </#if>
                 </div>
                 </div>
+				<#if (numOfAuthors?? && numOfAuthors > 0) >
+
+					<#-- Sparkline -->
+					<div id="sparkline-container">
+						
+						<#assign displayTable = false />
+						
+						<#assign sparklineVO = egoPubSparklineVO />
+						<div id="publication-count-sparkline-include"><#include "personPublicationSparklineContent.ftl"></div>
+		
+						<#assign sparklineVO = uniqueCoauthorsSparklineVO />
+						<div id="coauthor-count-sparkline-include"><#include "coAuthorshipSparklineContent.ftl"></div>
+					</div>  
+		
+					<div class="vis_stats">
+				
+					<div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
+				
+						<div class="vis-tables">
+						    
+						    <p id="publications_table_container" class="datatable">
+
+						    <#assign tableID = "publication_data_table" />
+						    <#assign tableCaption = "Publications per year " />
+						    <#assign tableActivityColumnName = "Publications" />
+						    <#assign tableContent = egoPubSparklineVO.yearToActivityCount />
+						    <#assign fileDownloadLink = egoPubSparklineVO.downloadDataLink />
+						    
+						    <#include "yearToActivityCountTable.ftl">
+
+						    </p>
+						    
+						</div>
+						
+						<#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) >
+				
+						    <div class="vis-tables">
+						        <p id="coauth_table_container" class="datatable"></p>
+						    </div>
+						
+						</#if>
+						
+						<div style="clear:both"></div>
+				
+					</div>
+				
+				</#if>
             </div>
         </div>
-    </#if>
-
-    <#if (numOfAuthors?? && numOfAuthors > 0) >
-
-        <#-- Sparkline -->
-        <div id="sparkline-container">
-            
-            <#assign displayTable = false />
-            
-            <#assign sparklineVO = egoPubSparklineVO />
-            <div id="publication-count-sparkline-include"><#include "personPublicationSparklineContent.ftl"></div>
-    
-            <#assign sparklineVO = uniqueCoauthorsSparklineVO />
-            <div id="coauthor-count-sparkline-include"><#include "coAuthorshipSparklineContent.ftl"></div>
-        </div>  
-    
-        <div class="vis_stats">
-        
-        <div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
-        
-            <div class="vis-tables">
-                
-                <p id="publications_table_container" class="datatable">
-
-                <#assign tableID = "publication_data_table" />
-                <#assign tableCaption = "Publications per year " />
-                <#assign tableActivityColumnName = "Publications" />
-                <#assign tableContent = egoPubSparklineVO.yearToActivityCount />
-                <#assign fileDownloadLink = egoPubSparklineVO.downloadDataLink />
-                
-                <#include "yearToActivityCountTable.ftl">
-
-                </p>
-                
-            </div>
-            
-            <#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) >
-        
-                <div class="vis-tables">
-                    <p id="coauth_table_container" class="datatable"></p>
-                </div>
-            
-            </#if>
-            
-            <div style="clear:both"></div>
-        
-        </div>
-        
     </#if>
     
 </div>
+<div>
