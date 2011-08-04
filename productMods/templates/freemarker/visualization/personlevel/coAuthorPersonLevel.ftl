@@ -214,42 +214,42 @@ $(document).ready(function(){
 		
 						<#assign sparklineVO = uniqueCoauthorsSparklineVO />
 						<div id="coauthor-count-sparkline-include"><#include "coAuthorshipSparklineContent.ftl"></div>
-					</div>  
-		
-					<div class="vis_stats">
-				
-					<div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
-				
-						<div class="vis-tables">
-						    
-						    <p id="publications_table_container" class="datatable">
-
-						    <#assign tableID = "publication_data_table" />
-						    <#assign tableCaption = "Publications per year " />
-						    <#assign tableActivityColumnName = "Publications" />
-						    <#assign tableContent = egoPubSparklineVO.yearToActivityCount />
-						    <#assign fileDownloadLink = egoPubSparklineVO.downloadDataLink />
-						    
-						    <#include "yearToActivityCountTable.ftl">
-
-						    </p>
-						    
-						</div>
-						
-						<#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) >
-				
-						    <div class="vis-tables">
-						        <p id="coauth_table_container" class="datatable"></p>
-						    </div>
-						
-						</#if>
-						
-						<div style="clear:both"></div>
-				
-					</div>
+					</div>  	
 				
 				</#if>
             </div>
+
+			<div class="vis_stats">
+		
+				<div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
+		
+				<div class="vis-tables">
+				    
+				    <p id="publications_table_container" class="datatable">
+
+				    <#assign tableID = "publication_data_table" />
+				    <#assign tableCaption = "Publications per year " />
+				    <#assign tableActivityColumnName = "Publications" />
+				    <#assign tableContent = egoPubSparklineVO.yearToActivityCount />
+				    <#assign fileDownloadLink = egoPubSparklineVO.downloadDataLink />
+				    
+				    <#include "yearToActivityCountTable.ftl">
+
+				    </p>
+				    
+				</div>
+				
+				<#if (numOfCoAuthorShips?? && numOfCoAuthorShips > 0) >
+		
+				    <div class="vis-tables">
+				        <p id="coauth_table_container" class="datatable"></p>
+				    </div>
+				
+				</#if>
+				
+				<div style="clear:both"></div>
+		
+			</div>
         </div>
     </#if>
     
