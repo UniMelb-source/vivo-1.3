@@ -97,12 +97,12 @@ p.datatable {
     width: 50%;*/
 }
 #grant-count-sparkline-include {
-    float: left;
-    width: 50%;
+    /*float: left;
+    width: 50%;*/
 }
 #coinvestigator-count-sparkline-include {
-    float: right;
-    width: 50%;
+    /*float: right;
+    width: 50%;*/
 }
 .sub_headings a {
     font-size: .7em;

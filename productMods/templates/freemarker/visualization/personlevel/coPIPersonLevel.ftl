@@ -122,16 +122,7 @@ $(document).ready(function(){
         <#-- Moniker-->
             <em id="ego_moniker" class="moniker"></em>
         
-    </div>
-    
-    <div class = "toggle_visualization">
-        <div id="coauthorship_link_container" class="collaboratorship-link-container">
-            <div class="collaboratorship-icon"><a href="${coauthorshipURL}"><img src="${coAuthorIcon}" /></a></div>
-            <div class="collaboratorship-link">
-                <h3><a href="${coauthorshipURL}">Co-Author Network</a></h3>
-            </div>
-        </div>
-    </div>
+    </div>    
         
     <div style="clear:both;"></div>
     
@@ -172,6 +163,14 @@ $(document).ready(function(){
                     //-->
                 </script>
             </div>
+			<div class="toggle_visualization col-2">
+				<div id="coauthorship_link_container" class="collaboratorship-link-container">
+				    <div class="collaboratorship-icon"><a href="${coauthorshipURL}"><img src="${coAuthorIcon}" /></a></div>
+				    <div class="collaboratorship-link">
+				        <h3><a href="${coauthorshipURL}">Co-Author Network</a></h3>
+				    </div>
+				</div>
+			</div>
             <div id="dataPanel" class="col-2">
                 <h4 id ="profileTitle">Profile</h4>
                     
@@ -215,45 +214,44 @@ $(document).ready(function(){
 		
 						<#assign sparklineVO = uniqueCoInvestigatorsSparklineVO />
 						<div id="coinvestigator-count-sparkline-include"><#include "coInvestigationSparklineContent.ftl"></div>
-					</div>  
-		
-
-					<div class="vis_stats">
-				
-					<div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
-				
-						<div class="vis-tables">
-
-						    <p id="grants_table_container" class="datatable">
-
-						    <#assign tableID = "grant_data_table" />
-						    <#assign tableCaption = "Grants per year " />
-						    <#assign tableActivityColumnName = "Grants" />
-						    <#assign tableContent = egoGrantSparklineVO.yearToActivityCount />
-						    <#assign fileDownloadLink = egoGrantSparklineVO.downloadDataLink />
-						    
-						    <#include "yearToActivityCountTable.ftl">
-
-						    </p>
-						    
-						</div>
-						
-						<#if (numOfCoInvestigations?? && numOfCoInvestigations > 0) >
-				
-						    <div class="vis-tables">
-						    
-						    <p id="coinve_table_container" class="datatable"></p>
-						    </div>
-						
-						</#if>
-						
-						<div style="clear:both"></div>
-				
-					</div>
+					</div> 	
 				
 				</#if>
-
             </div>
+
+			<div class="vis_stats">
+		
+				<div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
+		
+				<div class="vis-tables">
+
+				    <p id="grants_table_container" class="datatable">
+
+				    <#assign tableID = "grant_data_table" />
+				    <#assign tableCaption = "Grants per year " />
+				    <#assign tableActivityColumnName = "Grants" />
+				    <#assign tableContent = egoGrantSparklineVO.yearToActivityCount />
+				    <#assign fileDownloadLink = egoGrantSparklineVO.downloadDataLink />
+				    
+				    <#include "yearToActivityCountTable.ftl">
+
+				    </p>
+				    
+				</div>
+				
+				<#if (numOfCoInvestigations?? && numOfCoInvestigations > 0) >
+		
+				    <div class="vis-tables">
+				    
+				    <p id="coinve_table_container" class="datatable"></p>
+				    </div>
+				
+				</#if>
+				
+				<div style="clear:both"></div>
+		
+			</div>
+
         </div>
     </#if>
     
