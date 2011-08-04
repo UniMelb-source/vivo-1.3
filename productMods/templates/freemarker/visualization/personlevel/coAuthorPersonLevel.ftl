@@ -164,7 +164,7 @@ $(document).ready(function(){
                     //-->
                 </script>
             </div>
-			<div class = "toggle_visualization" class="col-2">
+			<div class="toggle_visualization col-2" style="display: block; width:250px; float:right;">
 				<div id="coinvestigator_link_container" class="collaboratorship-link-container">
 					<div class="collaboratorship-icon"><a href="${coprincipalinvestigatorURL}"><img src="${coInvestigatorIcon}" /></a></div>
 					<div class="collaboratorship-link">

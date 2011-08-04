@@ -38,7 +38,11 @@ span.incomplete-data-holder,
     text-decoration: underline;
 }
 .collaboratorship-link-container {
-    width: 180px;
+    /*width: 180px;*/
+	border: 1px solid #e9e9e9;
+	background: #F7F9F9;
+	width: 250px;
+	float: right; 
 }
 .collaboratorship-link-separator {
     margin-top: 20px;
