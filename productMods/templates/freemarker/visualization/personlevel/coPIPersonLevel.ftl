@@ -194,7 +194,7 @@ $(document).ready(function(){
                 <div class="investigator_stats" id="lGrant" style="visibility:hidden"><span class="numbers" style="width:40px;" id="lastGrant"></span>
                 &nbsp;&nbsp;<span>Last Grant</span></div>
                 <div id="incomplete-data">Note: This information is based solely on grants that have been loaded into the VIVO system. 
-                This may only be a small sample of the person's total work.<p></p><p></p>
+                This may only be a small sample of the persons total work.<p></p><p></p>
                 <#if user.loggedIn > 
                     Go to your profile page to enter additional details about your grants.
                 <#else> 
@@ -202,59 +202,59 @@ $(document).ready(function(){
                 </#if>
                 </div>
                 </div>
+
+				<#if (numOfInvestigators?? && numOfInvestigators > 0) >
+
+					<#-- Sparkline -->
+					<div id="sparkline-container">
+						
+						<#assign displayTable = false />
+						
+						<#assign sparklineVO = egoGrantSparklineVO />
+						<div id="grant-count-sparkline-include"><#include "personGrantSparklineContent.ftl"></div>
+		
+						<#assign sparklineVO = uniqueCoInvestigatorsSparklineVO />
+						<div id="coinvestigator-count-sparkline-include"><#include "coInvestigationSparklineContent.ftl"></div>
+					</div>  
+		
+
+					<div class="vis_stats">
+				
+					<div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
+				
+						<div class="vis-tables">
+
+						    <p id="grants_table_container" class="datatable">
+
+						    <#assign tableID = "grant_data_table" />
+						    <#assign tableCaption = "Grants per year " />
+						    <#assign tableActivityColumnName = "Grants" />
+						    <#assign tableContent = egoGrantSparklineVO.yearToActivityCount />
+						    <#assign fileDownloadLink = egoGrantSparklineVO.downloadDataLink />
+						    
+						    <#include "yearToActivityCountTable.ftl">
+
+						    </p>
+						    
+						</div>
+						
+						<#if (numOfCoInvestigations?? && numOfCoInvestigations > 0) >
+				
+						    <div class="vis-tables">
+						    
+						    <p id="coinve_table_container" class="datatable"></p>
+						    </div>
+						
+						</#if>
+						
+						<div style="clear:both"></div>
+				
+					</div>
+				
+				</#if>
+
             </div>
         </div>
-    </#if>
-
-
-    <#if (numOfInvestigators?? && numOfInvestigators > 0) >
-
-        <#-- Sparkline -->
-        <div id="sparkline-container">
-            
-            <#assign displayTable = false />
-            
-            <#assign sparklineVO = egoGrantSparklineVO />
-            <div id="grant-count-sparkline-include"><#include "personGrantSparklineContent.ftl"></div>
-    
-            <#assign sparklineVO = uniqueCoInvestigatorsSparklineVO />
-            <div id="coinvestigator-count-sparkline-include"><#include "coInvestigationSparklineContent.ftl"></div>
-        </div>  
-    
-
-        <div class="vis_stats">
-        
-        <div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
-        
-            <div class="vis-tables">
-
-                <p id="grants_table_container" class="datatable">
-
-                <#assign tableID = "grant_data_table" />
-                <#assign tableCaption = "Grants per year " />
-                <#assign tableActivityColumnName = "Grants" />
-                <#assign tableContent = egoGrantSparklineVO.yearToActivityCount />
-                <#assign fileDownloadLink = egoGrantSparklineVO.downloadDataLink />
-                
-                <#include "yearToActivityCountTable.ftl">
-
-                </p>
-                
-            </div>
-            
-            <#if (numOfCoInvestigations?? && numOfCoInvestigations > 0) >
-        
-                <div class="vis-tables">
-                
-                <p id="coinve_table_container" class="datatable"></p>
-                </div>
-            
-            </#if>
-            
-            <div style="clear:both"></div>
-        
-        </div>
-        
     </#if>
     
 </div>
