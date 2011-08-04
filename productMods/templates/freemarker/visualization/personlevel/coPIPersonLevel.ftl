@@ -163,7 +163,7 @@ $(document).ready(function(){
                     //-->
                 </script>
             </div>
-			<div class="toggle_visualization col-2">
+			<div class="toggle_visualization col-2" style="display: block; width:250px; float:right;">
 				<div id="coauthorship_link_container" class="collaboratorship-link-container">
 				    <div class="collaboratorship-icon"><a href="${coauthorshipURL}"><img src="${coAuthorIcon}" /></a></div>
 				    <div class="collaboratorship-link">
