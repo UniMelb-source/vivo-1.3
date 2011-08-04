@@ -123,16 +123,7 @@ $(document).ready(function(){
         <#-- Moniker-->
         <em id="ego_moniker" class="moniker"></em>
 
-    </div>
-    
-    <div class = "toggle_visualization">
-        <div id="coinvestigator_link_container" class="collaboratorship-link-container">
-            <div class="collaboratorship-icon"><a href="${coprincipalinvestigatorURL}"><img src="${coInvestigatorIcon}" /></a></div>
-            <div class="collaboratorship-link">
-                <h3><a href="${coprincipalinvestigatorURL}">Co-Investigator Network</a></h3>
-            </div>
-        </div>
-    </div>
+    </div>   
     
     <div style="clear:both;"></div>
     
@@ -174,6 +165,16 @@ $(document).ready(function(){
                 </script>
             </div>
             <div id="dataPanel" class="col-2">
+
+				<div class = "toggle_visualization">
+					<div id="coinvestigator_link_container" class="collaboratorship-link-container">
+						<div class="collaboratorship-icon"><a href="${coprincipalinvestigatorURL}"><img src="${coInvestigatorIcon}" /></a></div>
+						<div class="collaboratorship-link">
+						    <h3><a href="${coprincipalinvestigatorURL}">Co-Investigator Network</a></h3>
+						</div>
+					</div>
+				</div>
+
                 <h4 id ="profileTitle">Profile</h4> 
                 
                 <div id="data-panel-content">
