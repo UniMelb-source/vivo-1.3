@@ -1079,7 +1079,7 @@ ul#browse-classes .count-classes {
 }
 /* ALPHA BROWSE------>  */
 ul#alpha-browse-individuals {
-    background-color: #fff;
+    /*background-color: #fff;*/
 }
 ul#alpha-browse-individuals li {
     font-size: .8em;
