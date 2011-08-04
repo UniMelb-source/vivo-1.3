@@ -223,7 +223,7 @@ $(document).ready(function(){
 		
 				<div class="sub_headings" id="table_heading"><h3>Tables</h3></div>
 		
-				<div class="vis-tables">
+				<div class="vis-tables" style="clear:left; width:250px;">
 
 				    <p id="grants_table_container" class="datatable">
 
@@ -256,3 +256,4 @@ $(document).ready(function(){
     </#if>
     
 </div>
+<div>
