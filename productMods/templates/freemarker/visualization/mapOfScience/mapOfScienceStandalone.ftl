@@ -23,7 +23,16 @@ corresponding changes in the included Templates. -->
     	title="" /> 
 </div>
 
-<div id="left-column" class="hide-dom-on-init">
+<div><div id="map_area"></div>
+<div id="percent-mapped-info">
+mapped <span id="percent-mapped"></span>% of <span id="total-publications"></span> publications
+	<img class="filterInfoIcon" id="imageIconThree" src="${urls.images}/iconInfo.png" 
+		alt="information icon" 
+		title="" /></div>
+
+</div>
+
+<div class="hide-dom-on-init">
 	<div id="notification-container" style="display:none">
         <div id="error-notification" class="ui-state-error" style="padding:10px; -moz-box-shadow:0 0 6px #980000; -webkit-box-shadow:0 0 6px #980000; box-shadow:0 0 6px #980000;">
             <a class="ui-notify-close" href="#"><span class="ui-icon ui-icon-close" style="float:right"></span></a>
@@ -61,14 +70,6 @@ corresponding changes in the included Templates. -->
     </div>
 </div>		
 
-<div id="right-column"><div id="map_area"></div>
-<div id="percent-mapped-info">
-mapped <span id="percent-mapped"></span>% of <span id="total-publications"></span> publications
-	<img class="filterInfoIcon" id="imageIconThree" src="${urls.images}/iconInfo.png" 
-		alt="information icon" 
-		title="" /></div>
-
-</div>
 </div>
 <div id="toolTipOne" style="display:none;">
 VIVO's Map of Science visualization shows the publication activity of any organization, person, or university in a VIVO instance, 
