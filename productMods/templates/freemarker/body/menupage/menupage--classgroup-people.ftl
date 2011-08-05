@@ -1,5 +1,4 @@
 <#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
-    
     <#include "menupage-browse.ftl">
     
     ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/menupage/menupage.css" />')}
@@ -7,10 +6,6 @@
     <#include "menupage-scripts.ftl">
     
     ${scripts.add('<script type="text/javascript" src="${urls.base}/js/menupage/browseByVClassPeople.js"></script>')}
-
-<#else>
-    ${noDataNotification}
-</#if>
 </div>
 <div class="col-2">
 <#include "menupage-checkForData.ftl">
@@ -35,3 +30,7 @@
         </section>
     </section>
 </div>
+<div>    
+<#else>
+    ${noDataNotification}
+</#if>
