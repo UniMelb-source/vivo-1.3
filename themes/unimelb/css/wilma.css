@@ -1045,7 +1045,7 @@ ul#find-filters a.selected {
 }
 /* BROWSE BY ------>  */
 #browse-by {
-    width: 920px;
+    /*width: 920px;*/
 }
 #browse-by h2 {
     background: #5e6363;
