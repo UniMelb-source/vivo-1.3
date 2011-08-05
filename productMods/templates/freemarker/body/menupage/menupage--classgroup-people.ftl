@@ -1,13 +1,6 @@
 <#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
-    <#include "menupage-browse.ftl">
-    
-    ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/menupage/menupage.css" />')}
-    
-    <#include "menupage-scripts.ftl">
-    
-    ${scripts.add('<script type="text/javascript" src="${urls.base}/js/menupage/browseByVClassPeople.js"></script>')}
 </div>
-<div class="col-2">
+<div style="width:100%;">
 <#include "menupage-checkForData.ftl">
 <#if !noData>
     <section id="menupage-intro" class="people" role="region">
@@ -29,8 +22,15 @@
             </nav>
         </section>
     </section>
-</div>
-<div>    
+    
+    <#include "menupage-browse.ftl">
+    
+    ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/menupage/menupage.css" />')}
+    
+    <#include "menupage-scripts.ftl">
+    
+    ${scripts.add('<script type="text/javascript" src="${urls.base}/js/menupage/browseByVClassPeople.js"></script>')}
+
 <#else>
     ${noDataNotification}
 </#if>
