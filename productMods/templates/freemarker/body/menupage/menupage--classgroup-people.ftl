@@ -1,6 +1,6 @@
 <#-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
 </div>
-<div style="width:100%;">
+<div style="col-8">
 <#include "menupage-checkForData.ftl">
 <#if !noData>
     <section id="menupage-intro" class="people" role="region">
