@@ -58,16 +58,7 @@
             <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
                 <@p.objectPropertyListing positions editable />
             </#if> 
-        </header>
-         
-        <#-- Overview -->
-        <#include "individual-overview.ftl">
-        
-        <#-- Research Areas -->
-        <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!> 
-        <#if researchAreas?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-            <@p.objectPropertyListing researchAreas editable />
-        </#if>
+        </header>         
 
         <#include "individual-adminPanel.ftl">
    
@@ -110,7 +101,16 @@
         <@vp.webpages propertyGroups editable "individual-urls-people" />
     </section>
 
-	<#include "individual-visualizationFoafPerson.ftl">    
+	<#include "individual-visualizationFoafPerson.ftl">
+
+    <#-- Overview -->
+    <#include "individual-overview.ftl">
+    
+    <#-- Research Areas -->
+    <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!> 
+    <#if researchAreas?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+        <@p.objectPropertyListing researchAreas editable />
+    </#if>    
 
 </section>
 

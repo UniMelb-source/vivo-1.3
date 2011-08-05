@@ -665,7 +665,7 @@ body.home #main-content > h2 {
 
 h1,
 .pullquote {
-  font-size: 24px;
+  font-size: 18px;
   color: #003366;
   /*clear: both;*/
   padding: 10px 0px 3px;
@@ -673,7 +673,7 @@ h1,
   font-weight: bold; }
 
 .pullquote {
-  font-size: 24px; }
+  font-size: 18px; }
 
 /*h2 {
   font-size: 20px;
