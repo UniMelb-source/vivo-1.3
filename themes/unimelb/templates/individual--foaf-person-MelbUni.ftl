@@ -104,7 +104,9 @@
 	<#include "individual-visualizationFoafPerson.ftl">
 
     <#-- Overview -->
+	<div class="col-6">
     <#include "individual-overview.ftl">
+	</div>
     
     <#-- Research Areas -->
     <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!> 
