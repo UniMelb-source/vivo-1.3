@@ -104,15 +104,15 @@
 	<#include "individual-visualizationFoafPerson.ftl">
 
     <#-- Overview -->
-	<div class="col-6">
-    <#include "individual-overview.ftl">
-	</div>
-    
-    <#-- Research Areas -->
-    <#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!> 
-    <#if researchAreas?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-        <@p.objectPropertyListing researchAreas editable />
-    </#if>    
+	<div class="col-6" style="clear: both;">
+		<#include "individual-overview.ftl">
+		
+		<#-- Research Areas -->
+		<#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!> 
+		<#if researchAreas?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+		    <@p.objectPropertyListing researchAreas editable />
+		</#if>
+	</div>    
 
 </section>
 
