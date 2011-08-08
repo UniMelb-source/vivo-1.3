@@ -111,7 +111,9 @@
 
     <#-- Overview -->
 	<#include "individual-overview.ftl">
-	
+
+	<br>
+
 	<#-- Research Areas -->
 	<#assign researchAreas = propertyGroups.pullProperty("${core}hasResearchArea")!> 
 	<#if researchAreas?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
