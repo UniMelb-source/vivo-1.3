@@ -2,14 +2,11 @@
 
 <#-- Individual profile page template for foaf:Person individuals -->
 
-<br>
-</div>
-
 <#include "individual-setup.ftl">
 <#import "individual-qrCodeGenerator.ftl" as qr>
 <#import "lib-vivo-properties.ftl" as vp>
 
-<section id="individual-intro" class="vcard person col-6" role="region">
+<section id="individual-intro" class="vcard person" role="region">
 
     <section id="individual-info" ${infoClass!} role="region">        
         <#-- Disable for now until controller sends data -->
@@ -105,8 +102,6 @@
 
 <#assign nameForOtherGroup = "other"> <#-- used by both individual-propertyGroupMenu.ftl and individual-properties.ftl -->
 
-<div class="col-6">
-
     <#-- Overview -->
 	<#include "individual-overview.ftl">
 
@@ -125,12 +120,6 @@
 
 <#-- Ontology properties -->
 <#include "individual-properties.ftl">
-
-</div>
-<div class="col-2">
-	<#include "individual-visualizationFoafPerson.ftl">
-</div>
-<div>
 
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/individual.css" />',
                   '<link rel="stylesheet" href="${urls.base}/css/individual/individual-vivo.css" />',
