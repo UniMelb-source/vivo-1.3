@@ -932,6 +932,22 @@ p{
 /* MENU PAGES -------------------------------------->  */
 /* ------------------------------------------------->  */
 
+#vis_container_coauthor {
+	float: right;	
+}
+
+.sparkline_wrapper_table {
+	width: 190px;
+}
+
+.sparklineHeading {
+  margin: 12px 0px 0px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Droid Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #4e4e4e;
+  line-height: 1.3; }
+
 /* VISUAL GRAPH------>  */
 #menupage-intro {
     /*width: 920px;

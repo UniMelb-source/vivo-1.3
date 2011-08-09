@@ -1137,7 +1137,7 @@ input[type=submit]:active,
 
 .main h1 {
   /*clear: both;*/
-  color: #4e4e4e; }
+  /*color: #4e4e4e;*/ }
 
 .main .section {
   margin-bottom: 20px; }
