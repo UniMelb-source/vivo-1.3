@@ -84,7 +84,7 @@ ul#additional-emails li {
 }
 /* <------ INDIVIDUAL INTRO FOR PERSON*/
 #individual-intro.person {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     position: relative;
     /*width: 100%;*/
 }
