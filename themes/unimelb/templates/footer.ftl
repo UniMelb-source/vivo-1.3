@@ -3,8 +3,10 @@
 </div> <!-- #wrapper-content -->
 </div>
 
-<div class="col-2">	
-	<#include "individual-visualizationFoafPerson.ftl">
+<div class="col-2">
+	<#if individual!?size > 0>	
+		<#include "individual-visualizationFoafPerson.ftl">
+	</#if>
 
 	<div class="nav first" role="navigation">
 		<ul>
