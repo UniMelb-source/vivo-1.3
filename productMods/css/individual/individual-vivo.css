@@ -86,7 +86,7 @@ ul#additional-emails li {
 #individual-intro.person {
     margin-bottom: 30px;
     position: relative;
-    width: 100%;
+    /*width: 100%;*/
 }
 #individual-intro.person #individual-info {
     float: left;
