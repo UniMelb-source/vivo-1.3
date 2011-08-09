@@ -8,59 +8,6 @@
 
 <section id="individual-intro" class="vcard person" role="region">
 
-    <section id="individual-info" ${infoClass!} role="region">        
-        <#-- Disable for now until controller sends data -->
-        <#--
-        <section id="co-authors" role="region">
-            <header>
-                <h3><span class="grey">10 </span>Co-Authors</h3>
-            </header>
-
-            <ul role="list">
-                <li role="listitem"><a href="#"><img class="co-author" src="" /></a></li>
-                <li role="listitem"><a href="#"><img class="co-author" src="" /></a></li>
-            </ul>
-
-            <p class="view-all-coauthors"><a class="view-all-style" href="#">View All <img src="${urls.images}/arrowIcon.gif" alt="arrow icon" /></a></p>
-        </section>
-        -->        
-        
-        <header>
-            <#if relatedSubject??>
-                <h2>${relatedSubject.relatingPredicateDomainPublic} for ${relatedSubject.name}</h2>
-                <p><a href="${relatedSubject.url}">&larr; return to ${relatedSubject.name}</a></p>
-            <#else>                
-                <h1 class="fn foaf-person">
-                    <#-- Label -->
-                    <@p.label individual editable />
-
-                    <#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
-                    <#assign title = propertyGroups.pullProperty("${core}preferredTitle")!>
-                    <#if title?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-                        <@p.addLinkWithLabel title editable />
-                        <#list title.statements as statement>
-                            <span class="display-title">${statement.value}</span>
-                            <@p.editingLinks "${title.name}" statement editable />
-                        </#list>
-                    </#if>
-                    <#-- If preferredTitle is unpopulated, display mostSpecificTypes -->
-                    <#if ! (title.statements)?has_content>
-                        <@p.mostSpecificTypes individual />
-                    </#if>                        
-                </h1>
-            </#if>
-               
-            <#-- Positions -->
-            <#assign positions = propertyGroups.pullProperty("${core}personInPosition")!>
-            <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-                <@p.objectPropertyListing positions editable />
-            </#if> 
-        </header>         
-
-        <#include "individual-adminPanel.ftl">
-   
-    </section>
-
     <section id="share-contact" role="region"> 
         <#-- Image -->           
         <#assign individualImage>
@@ -96,6 +43,60 @@
                 
         <#-- Links -->  
         <@vp.webpages propertyGroups editable "individual-urls-people" />
+    </section>
+
+    <section id="individual-info" ${infoClass!} role="region">        
+        <#-- Disable for now until controller sends data -->
+        <#--
+        <section id="co-authors" role="region">
+            <header>
+                <h3><span class="grey">10 </span>Co-Authors</h3>
+            </header>
+
+            <ul role="list">
+                <li role="listitem"><a href="#"><img class="co-author" src="" /></a></li>
+                <li role="listitem"><a href="#"><img class="co-author" src="" /></a></li>
+            </ul>
+
+            <p class="view-all-coauthors"><a class="view-all-style" href="#">View All <img src="${urls.images}/arrowIcon.gif" alt="arrow icon" /></a></p>
+        </section>
+        -->        
+        
+        <header>
+            <#if relatedSubject??>
+                <h2>${relatedSubject.relatingPredicateDomainPublic} for ${relatedSubject.name}</h2>
+                <p><a href="${relatedSubject.url}">&larr; return to ${relatedSubject.name}</a></p>
+            <#else>                
+                <h1 class="fn foaf-person">
+                    <#-- Label -->
+                    <@p.label individual editable />
+				</h1>
+				<h2>
+                    <#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
+                    <#assign title = propertyGroups.pullProperty("${core}preferredTitle")!>
+                    <#if title?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+                        <@p.addLinkWithLabel title editable />
+                        <#list title.statements as statement>
+                            <span class="display-title">${statement.value}</span>
+                            <@p.editingLinks "${title.name}" statement editable />
+                        </#list>
+                    </#if>
+                    <#-- If preferredTitle is unpopulated, display mostSpecificTypes -->
+                    <#if ! (title.statements)?has_content>
+                        <@p.mostSpecificTypes individual />
+                    </#if>                        
+                </h2>
+            </#if>
+               
+            <#-- Positions -->
+            <#assign positions = propertyGroups.pullProperty("${core}personInPosition")!>
+            <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
+                <@p.objectPropertyListing positions editable />
+            </#if> 
+        </header>         
+
+        <#include "individual-adminPanel.ftl">
+   
     </section>	    
 
 </section>
