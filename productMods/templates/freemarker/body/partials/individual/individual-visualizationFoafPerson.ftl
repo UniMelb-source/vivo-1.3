@@ -35,44 +35,33 @@
 							<li>            
 						        <a href="${coAuthorVisUrl}"><img src="${coAuthorIcon}" alt="Co-author network icon" width="30px" height="30px" />Co-Author Network</a>
 							</li>
+							<li>
+								<a href="${mapOfScienceVisUrl}"><img src="${mapOfScienceIcon}" alt="Map Of Science icon" width="30px" height="30px" />Map Of Science</a>
+							</li>
+            
+							${scripts.add('<script type="text/javascript" src="${googleJSAPI}"></script>',
+								          '<script type="text/javascript" src="${urls.base}/js/visualization/visualization-helper-functions.js"></script>',
+								          '<script type="text/javascript" src="${urls.base}/js/visualization/sparkline.js"></script>')}           
+						
+							<script type="text/javascript">
+								var visualizationUrl = '${urls.base}/visualizationAjax?uri=${individual.uri?url}';
+								var infoIconSrc = '${urls.images}/iconInfo.png';
+							</script>
+						</#if>
+				
+						<#if isInvestigator>
+							<#assign coInvestigatorVisUrl = individual.coInvestigatorVisUrl>
+							<#assign coInvestigatorIcon = "${urls.images}/visualization/co_investigator_icon.png">
+							
+							<li>
+								<a href="${coInvestigatorVisUrl}"><img src="${coInvestigatorIcon}" alt="Co-investigator network icon" width="30px" height="30px" />Co-Investigator Network</a>
+							</li>
+						</#if>
+
 						</ul>
 					</li>
 				</ul>
 			</div>
-            
-            <div class="collaboratorship-link-separator"></div>
-            
-  	      	<div id="mapofscience_link_container" class="collaboratorship-link-container">
-            	<div class="collaboratorship-icon">	
-                    <a href="${mapOfScienceVisUrl}"><img src="${mapOfScienceIcon}" alt="Map Of Science icon" width="30px" height="30px" /></a>
-                </div>
-                <div class="collaboratorship-link"><a href="${mapOfScienceVisUrl}">Map Of Science</a></div>
-            </div>
-            
-            ${scripts.add('<script type="text/javascript" src="${googleJSAPI}"></script>',
-                          '<script type="text/javascript" src="${urls.base}/js/visualization/visualization-helper-functions.js"></script>',
-                          '<script type="text/javascript" src="${urls.base}/js/visualization/sparkline.js"></script>')}           
-            
-            <script type="text/javascript">
-                var visualizationUrl = '${urls.base}/visualizationAjax?uri=${individual.uri?url}';
-                var infoIconSrc = '${urls.images}/iconInfo.png';
-            </script>
-            
-            <#if isInvestigator>
-                <div class="collaboratorship-link-separator"></div>
-            </#if>
-        </#if>
-        
-        <#if isInvestigator>
-            <#assign coInvestigatorVisUrl = individual.coInvestigatorVisUrl>
-            <#assign coInvestigatorIcon = "${urls.images}/visualization/co_investigator_icon.png">
-            
-            <div id="coinvestigator_link_container" class="collaboratorship-link-container">
-                <div class="collaboratorship-icon">
-                    <a href="${coInvestigatorVisUrl}"><img src="${coInvestigatorIcon}" alt="Co-investigator network icon" width="30px" height="30px" /></a>
-                </div>
-                <div class="collaboratorship-link"><a href="${coInvestigatorVisUrl}">Co-Investigator Network</a></div>
-            </div>
-        </#if>
+
     </section>
 </#if>
