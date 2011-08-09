@@ -8,6 +8,16 @@
 
 <section id="individual-intro" class="vcard person" role="region">
 
+    <#-- Image -->           
+    <#assign individualImage>
+        <@p.image individual=individual 
+                  propertyGroups=propertyGroups 
+                  namespaces=namespaces 
+                  editable=editable 
+                  showPlaceholder="always" 
+                  placeholder="${urls.images}/placeholders/person.thumbnail.jpg" />
+    </#assign>
+
     <section id="individual-info" ${infoClass!} role="region">        
         <#-- Disable for now until controller sends data -->
         <#--
@@ -70,15 +80,6 @@
 
 	<section id="share-contact" role="region">
 		<div class="col-2"> 
-		    <#-- Image -->           
-		    <#assign individualImage>
-		        <@p.image individual=individual 
-		                  propertyGroups=propertyGroups 
-		                  namespaces=namespaces 
-		                  editable=editable 
-		                  showPlaceholder="always" 
-		                  placeholder="${urls.images}/placeholders/person.thumbnail.jpg" />
-		    </#assign>
 
 		    <#if ( individualImage?contains('<img class="individual-photo"') )>
 		        <#assign infoClass = 'class="withThumb"'/>
