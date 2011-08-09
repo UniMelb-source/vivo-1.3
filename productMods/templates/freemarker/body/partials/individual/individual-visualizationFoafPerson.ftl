@@ -2,6 +2,8 @@
 
 <#-- Template for sparkline visualization on individual profile page -->
 
+<#include "individual-setup.ftl">
+
 <#-- Determine whether this person is an author -->
 <#assign isAuthor = p.hasStatements(propertyGroups, "${core}authorInAuthorship") />
 

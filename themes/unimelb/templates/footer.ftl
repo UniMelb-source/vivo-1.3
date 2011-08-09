@@ -3,8 +3,7 @@
 </div> <!-- #wrapper-content -->
 </div>
 
-<div class="col-2">
-	<#include "individual-setup.ftl">
+<div class="col-2">	
 	<#include "individual-visualizationFoafPerson.ftl">
 
 	<div class="nav first" role="navigation">
