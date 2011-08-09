@@ -4,31 +4,33 @@
 </div>
 
 <div class="col-2">
-<div class="nav first" role="navigation">
-	<ul>
-		<li> Browse Find An Expert
-			<ul>
-				<#list menu.items as item>
-				    <li><a href="${item.url}" <#if item.active> class="selected" </#if>>${item.linkText}</a></li>
-				</#list>
-			</ul>
-		</li>
-	</ul>
-	<ul>
-		<li> Administration
-			<ul>
-	            <#if user.loggedIn>
-		            <#if user.hasSiteAdminAccess>
-		                <li role="listitem"><a href="${urls.siteAdmin}">Site Admin</a></li>						
-		            </#if>
-					<li role="listitem"><a href="${urls.logout}">Log out</a></li>
-		        <#else>
-		            <li role="listitem"><a class="log-out" title="log in to manage this site" href="${urls.login}">Log in</a></li>
-		        </#if>
-			</ul>
-		</li>
-	</ul>
-</div>
+	<#include "individual-visualizationFoafPerson.ftl">
+
+	<div class="nav first" role="navigation">
+		<ul>
+			<li> Browse Find An Expert
+				<ul>
+					<#list menu.items as item>
+						<li><a href="${item.url}" <#if item.active> class="selected" </#if>>${item.linkText}</a></li>
+					</#list>
+				</ul>
+			</li>
+		</ul>
+		<ul>
+			<li> Administration
+				<ul>
+			        <#if user.loggedIn>
+				        <#if user.hasSiteAdminAccess>
+				            <li role="listitem"><a href="${urls.siteAdmin}">Site Admin</a></li>						
+				        </#if>
+						<li role="listitem"><a href="${urls.logout}">Log out</a></li>
+				    <#else>
+				        <li role="listitem"><a class="log-out" title="log in to manage this site" href="${urls.login}">Log in</a></li>
+				    </#if>
+				</ul>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <footer role="contentinfo">
