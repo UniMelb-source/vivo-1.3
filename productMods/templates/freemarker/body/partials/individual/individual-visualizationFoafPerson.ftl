@@ -36,10 +36,10 @@
 					<li>Visualizations
 						<ul>
 							<li>            
-						        <a href="${coAuthorVisUrl}"><img src="${coAuthorIcon}" alt="Co-author network icon" width="30px" height="30px" style="vertical-align:middle;padding-right:5px;" />Co-Author Network</a>
+						        <a href="${coAuthorVisUrl}"><img src="${coAuthorIcon}" alt="Co-author network icon" width="30px" height="30px" style="vertical-align:middle;padding-right:10px;" />Co-Author Network</a>
 							</li>
 							<li>
-								<a href="${mapOfScienceVisUrl}"><img src="${mapOfScienceIcon}" alt="Map Of Science icon" width="30px" height="30px" style="vertical-align:middle;padding-right:5px;" />Map Of Science</a>
+								<a href="${mapOfScienceVisUrl}"><img src="${mapOfScienceIcon}" alt="Map Of Science icon" width="30px" height="30px" style="vertical-align:middle;padding-right:10px;" />Map Of Science</a>
 							</li>
             
 							${scripts.add('<script type="text/javascript" src="${googleJSAPI}"></script>',
@@ -57,7 +57,7 @@
 							<#assign coInvestigatorIcon = "${urls.images}/visualization/co_investigator_icon.png">
 							
 							<li>
-								<a href="${coInvestigatorVisUrl}"><img src="${coInvestigatorIcon}" alt="Co-investigator network icon" width="30px" height="30px" style="vertical-align:middle;padding-right:5px;" />Co-Investigator Network</a>
+								<a href="${coInvestigatorVisUrl}"><img src="${coInvestigatorIcon}" alt="Co-investigator network icon" width="30px" height="30px" style="vertical-align:middle;padding-right:10px;" />Co-Investigator Network</a>
 							</li>
 						</#if>
 
