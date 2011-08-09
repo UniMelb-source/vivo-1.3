@@ -933,12 +933,12 @@ p{
 /* ------------------------------------------------->  */
 
 #vis_container_coauthor {
-	float: right;	
+	float: right;
+	padding-bottom: 15px;	
 }
 
 .sparkline_wrapper_table {
 	width: 190px;
-	padding-bottom: 15px;
 }
 
 /* VISUAL GRAPH------>  */
