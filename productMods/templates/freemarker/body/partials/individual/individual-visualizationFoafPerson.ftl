@@ -26,16 +26,17 @@
             
             <span id="sparklineHeading">Publications in VIVO</span>   
             
-            <div id="vis_container_coauthor">&nbsp;</div>
-            
-            <div class="collaboratorship-link-separator"></div>
-            
-            <div id="coauthorship_link_container" class="collaboratorship-link-container">
-				<div class="collaboratorship-icon">
-                    <a href="${coAuthorVisUrl}"><img src="${coAuthorIcon}" alt="Co-author network icon" width="30px" height="30px" /></a>
-                </div>
-                <div class="collaboratorship-link"><a href="${coAuthorVisUrl}">Co-Author Network</a></div>
-            </div>
+            <div id="vis_container_coauthor">&nbsp;</div>            
+
+			<ul>
+				<li>Visualizations
+					<ul>
+						<li>            
+				            <a href="${coAuthorVisUrl}"><img src="${coAuthorIcon}" alt="Co-author network icon" width="30px" height="30px" />Co-Author Network</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
             
             <div class="collaboratorship-link-separator"></div>
             
