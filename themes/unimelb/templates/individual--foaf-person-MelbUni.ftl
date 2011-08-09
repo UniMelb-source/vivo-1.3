@@ -74,16 +74,9 @@
 		    <div id="photo-wrapper">${individualImage}</div>
 		
 		    <nav role="navigation">
-		</div>        
-   
-    </section>
-
-	<section id="share-contact" role="region">
-		<div class="col-2"> 
-
-		    <#if ( individualImage?contains('<img class="individual-photo"') )>
-		        <#assign infoClass = 'class="withThumb"'/>
-		    </#if>
+				<#if ( individualImage?contains('<img class="individual-photo"') )>
+				    <#assign infoClass = 'class="withThumb"'/>
+				</#if>
 		    
 		        <ul id ="individual-tools-people" role="list">
 		            <li role="listitem"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon"/></li>
@@ -96,13 +89,19 @@
 		            <@qr.renderCode />
 		        </ul>
 		    </nav>
+		</div>        
+   
+    </section>
+
+	<section id="share-contact" role="region">
+		<div class="col-2"> 
 		        
-		        <#include "individual-contactInfo.ftl">  
+	        <#include "individual-contactInfo.ftl">  
 		            
 		    <#-- Links -->  
 		    <@vp.webpages propertyGroups editable "individual-urls-people" />
 		</div>
-		<div class="col-4">
+		<div class="col-3">
 	        <#include "individual-adminPanel.ftl">
 		</div>
     </section>	    
