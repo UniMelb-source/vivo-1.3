@@ -940,7 +940,7 @@ p{
 	width: 190px;
 }
 
-.sparklineHeading {
+#sparklineHeading {
   margin: 12px 0px 0px;
   font-size: 14px;
   font-weight: bold;
