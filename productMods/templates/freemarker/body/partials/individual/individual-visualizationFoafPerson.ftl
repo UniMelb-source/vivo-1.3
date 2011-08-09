@@ -22,16 +22,15 @@
             <#assign coAuthorVisUrl = individual.coAuthorVisUrl>
             <#assign mapOfScienceVisUrl = individual.mapOfScienceUrl>
             
-            <#assign googleJSAPI = "https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22imagesparkline%22%5D%7D%5D%7D"> 
-            
-            <span id="sparklineHeading">Publications in VIVO</span>   
-            
-            <div id="vis_container_coauthor">&nbsp;</div>
-	
-			<br>            
+            <#assign googleJSAPI = "https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22imagesparkline%22%5D%7D%5D%7D">             
 
 			<div class="nav">
 				<ul>
+					<li>Publications in VIVO
+						<ul>
+							<div id="vis_container_coauthor">&nbsp;</div>							
+						</ul>
+					</li>
 					<li>Visualizations
 						<ul>
 							<li>            
