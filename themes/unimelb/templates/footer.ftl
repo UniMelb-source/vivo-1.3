@@ -4,7 +4,7 @@
 </div>
 
 <div class="col-2">
-	<#if individual>	
+	<#if individual??>	
 		<#include "individual-visualizationFoafPerson.ftl">
 	</#if>
 
