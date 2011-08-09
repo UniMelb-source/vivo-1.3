@@ -103,13 +103,9 @@
 
 </section>
 
-<div class="col-2">
-	<#include "individual-visualizationFoafPerson.ftl">
-</div>
-
 <#assign nameForOtherGroup = "other"> <#-- used by both individual-propertyGroupMenu.ftl and individual-properties.ftl -->
 
-<div class="col-6" style="clear: both;">
+<div class="col-6">
 
     <#-- Overview -->
 	<#include "individual-overview.ftl">
@@ -131,7 +127,9 @@
 <#include "individual-properties.ftl">
 
 </div>
-
+<div class="col-2">
+	<#include "individual-visualizationFoafPerson.ftl">
+</div>
 <div>
 
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/individual.css" />',
