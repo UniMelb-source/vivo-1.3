@@ -73,7 +73,7 @@ ul#additional-emails li {
 }
 /* <------ INDIVIDUAL INTRO - RIGHT SIDE CONTENT */
 #individual-info.withThumb {
-    width: 78%;
+    /*width: 78%;*/
 }
 #individual-intro .individual-overview {
     margin-bottom: 30px;
