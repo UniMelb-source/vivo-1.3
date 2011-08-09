@@ -28,15 +28,17 @@
             
             <div id="vis_container_coauthor">&nbsp;</div>            
 
-			<ul>
-				<li>Visualizations
-					<ul>
-						<li>            
-				            <a href="${coAuthorVisUrl}"><img src="${coAuthorIcon}" alt="Co-author network icon" width="30px" height="30px" />Co-Author Network</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+			<div class="nav">
+				<ul>
+					<li>Visualizations
+						<ul>
+							<li>            
+						        <a href="${coAuthorVisUrl}"><img src="${coAuthorIcon}" alt="Co-author network icon" width="30px" height="30px" />Co-Author Network</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
             
             <div class="collaboratorship-link-separator"></div>
             
