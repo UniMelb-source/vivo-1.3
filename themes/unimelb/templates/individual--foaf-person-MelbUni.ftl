@@ -99,9 +99,7 @@
                 
         <#-- Links -->  
         <@vp.webpages propertyGroups editable "individual-urls-people" />
-    </section>
-
-	<#include "individual-visualizationFoafPerson.ftl">    
+    </section>	    
 
 </section>
 
@@ -127,6 +125,12 @@
 
 <#-- Ontology properties -->
 <#include "individual-properties.ftl">
+
+</div>
+<div class="col-2">
+	<#include "individual-visualizationFoafPerson.ftl">
+</div>
+<div>
 
 ${stylesheets.add('<link rel="stylesheet" href="${urls.base}/css/individual/individual.css" />',
                   '<link rel="stylesheet" href="${urls.base}/css/individual/individual-vivo.css" />',
