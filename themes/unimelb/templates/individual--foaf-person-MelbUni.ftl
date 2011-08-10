@@ -45,6 +45,9 @@
 		                <#-- Label -->
 		                <@p.label individual editable />
 					</h1>
+
+					<div id="photo-wrapper">${individualImage}</div>		
+
 					<h2>
 		                <#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
 		                <#assign title = propertyGroups.pullProperty("${core}preferredTitle")!>
@@ -66,29 +69,25 @@
 		        <#assign positions = propertyGroups.pullProperty("${core}personInPosition")!>
 		        <#if positions?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
 		            <@p.objectPropertyListing positions editable />
-		        </#if> 
-		    </header> 
-		</div>
+		        </#if>
 
-		<div class="col-2">
-		    <div id="photo-wrapper">${individualImage}</div>
-		
-		    <nav role="navigation">
-				<#if ( individualImage?contains('<img class="individual-photo"') )>
-				    <#assign infoClass = 'class="withThumb"'/>
-				</#if>
-		    
-		        <ul id ="individual-tools-people" role="list">
-		            <li role="listitem"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon"/></li>
-		
-		            <#assign rdfUrl = individual.rdfUrl>
-		            <#if rdfUrl??>
-		                <li role="listitem"><a title="View this individual in RDF format" class="icon-rdf" href="${rdfUrl}">RDF</a></li>
-		            </#if>
-		            
-		            <@qr.renderCode />
-		        </ul>
-		    </nav>
+				<nav role="navigation">
+					<#if ( individualImage?contains('<img class="individual-photo"') )>
+						<#assign infoClass = 'class="withThumb"'/>
+					</#if>
+			
+					<ul id ="individual-tools-people" role="list">
+					    <li role="listitem"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon"/></li>
+	
+					    <#assign rdfUrl = individual.rdfUrl>
+					    <#if rdfUrl??>
+					        <li role="listitem"><a title="View this individual in RDF format" class="icon-rdf" href="${rdfUrl}">RDF</a></li>
+					    </#if>
+					    
+					    <@qr.renderCode />
+					</ul>
+				</nav> 
+		    </header> 
 		</div>        
    
     </section>
