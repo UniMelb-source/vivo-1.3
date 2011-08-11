@@ -96,7 +96,7 @@
     </section>
 
 	<section id="share-contact" role="region">
-		<div class="col-2" style="margin-left:0;"> 
+		<div class="col-6" style="margin-left:0;"> 
 		        
 	        <#include "individual-contactInfo.ftl">  
 		            
