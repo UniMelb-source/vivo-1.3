@@ -17,8 +17,8 @@
     <li style="display: inline; list-style-type: none;"><@p.addLinkWithLabel phone editable /></li>
     <#if phone.statements?has_content> <#-- if there are any statements -->
         <#list phone.statements as statement>
-            <li role="listitem" style="display: inline; list-style-type: none;">                           
-               <img class ="icon-phone  middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${statement.value}
+            <li role="listitem" style="display: inline; list-style-type: none; padding-left:10px;">                           
+               <img class="icon-phone middle" src="${urls.images}/individual/phoneIcon.gif" alt="phone icon" />${statement.value}
                 <@p.editingLinks "${phone.localName}" statement editable />
             </li>
         </#list>
@@ -40,8 +40,8 @@
         <li style="display: inline; list-style-type: none;"><@p.addLinkWithLabel email editable label/></li>
         <#if email.statements?has_content> <#-- if there are any statements -->
             <#list email.statements as statement>
-                <li role="listitem" style="display: inline; list-style-type: none;">
-                    <img class ="icon-email middle" src="${urls.images}/individual/emailIcon.gif" alt="email icon" />
+                <li role="listitem" style="display: inline; list-style-type: none; padding-left:10px;">
+                    <img class="icon-email middle" src="${urls.images}/individual/emailIcon.gif" alt="email icon" />
                     <a class="email" href="mailto:${statement.value}">${statement.value}</a>
                     <@p.editingLinks "${email.localName}" statement editable />
                 </li>

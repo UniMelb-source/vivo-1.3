@@ -71,6 +71,9 @@
 		            <@p.objectPropertyListing positions editable />
 		        </#if>
 
+				<#-- Links -->  
+				<@vp.webpages propertyGroups editable "individual-urls-people" />
+
 				<nav role="navigation">
 					<#if ( individualImage?contains('<img class="individual-photo"') )>
 						<#assign infoClass = 'class="withThumb"'/>
@@ -97,8 +100,6 @@
 		        
 	        <#include "individual-contactInfo.ftl">  
 		            
-		    <#-- Links -->  
-		    <@vp.webpages propertyGroups editable "individual-urls-people" />
 		</div>
 		<div class="col-3">
 	        <#include "individual-adminPanel.ftl">
