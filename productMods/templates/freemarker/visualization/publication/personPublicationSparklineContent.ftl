@@ -148,7 +148,7 @@
 
                                     $('#${sparklineContainerID} td.sparkline_number').text(totalPubs + " in the last 10 full").css("font-weight", "bold").css("font-size",".85em").attr("class", "grey sparkline_text");
 
-                                    var sparksText = "years";
+                                    var sparksText = totalPubs + " in the last 10 full years";
 
                                     if (totalPubs !== totalPublicationCount) {
                                         sparksText += ' (' + totalPublicationCount + ' total)' ; 
@@ -179,7 +179,7 @@
                     
                     $('#${sparklineContainerID} td.sparkline_number').text(totalPubs).css("font-weight", "bold").attr("class", "grey sparkline_text").append("<span style='color: #2485AE;'> "+ pubDisplay +"<br/></span>");
             
-                    var sparksText = '  from <span class="sparkline_range">${sparklineVO.earliestYearConsidered?c}' 
+                    var sparksText = totalPubs + '  from <span class="sparkline_range">${sparklineVO.earliestYearConsidered?c}' 
                                         + ' to ${sparklineVO.latestRenderedPublicationYear?c}</span>';
 
                     if (totalPubs !== totalPublicationCount) {
