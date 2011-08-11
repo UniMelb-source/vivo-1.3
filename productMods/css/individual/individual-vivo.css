@@ -204,7 +204,7 @@ p.view-all-coauthors {
 
 /* <------ POSITIONS */
 ul#individual-personInPosition {
-    list-style-type: circle;
+    /*list-style-type: circle;*/
     padding-left: 20px;
 }
 ul#individual-personInPosition li {

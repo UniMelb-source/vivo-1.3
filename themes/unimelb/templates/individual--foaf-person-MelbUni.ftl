@@ -35,7 +35,7 @@
         </section>
         -->        
         
-		<div class="col-4" style="margin-left:0;">
+		<div class="col-6" style="margin-left:0;">
 		    <header>
 		        <#if relatedSubject??>
 		            <h2>${relatedSubject.relatingPredicateDomainPublic} for ${relatedSubject.name}</h2>

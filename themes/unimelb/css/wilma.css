@@ -1295,7 +1295,7 @@ h1.fn .most-specific-type {
 }
 ul#individual-personInPosition {
     font-size: 1em;
-    list-style: url("../../../images/individual/arrow-green.gif");
+    /*list-style: url("../../../images/individual/arrow-green.gif");*/
 }
 ul#individual-personInPosition li {
     /*line-height: 1.8em;*/
