@@ -177,7 +177,7 @@
                         var pubDisplay = "publications";
                     }
                     
-                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs).css("font-weight", "bold").attr("class", "grey").append("<span style='color: #2485AE;'> "+ pubDisplay +"<br/></span>");
+                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs).css("font-weight", "bold").attr("class", "grey sparkline_text").append("<span style='color: #2485AE;'> "+ pubDisplay +"<br/></span>");
             
                     var sparksText = '  from <span class="sparkline_range">${sparklineVO.earliestYearConsidered?c}' 
                                         + ' to ${sparklineVO.latestRenderedPublicationYear?c}</span>';
@@ -244,12 +244,12 @@
                     row2.append(sparklineNumberTD);
                     var row3 = $('<tr>');
                     
-                    var sparklineTextTD = $('<td>');
+                    /*var sparklineTextTD = $('<td>');
                     sparklineTextTD.attr('class', 'sparkline_text');
-                    row3.append(sparklineTextTD);
+                    row3.append(sparklineTextTD);*/
                     table.append(row);
                     table.append(row2);
-                    table.append(row3);
+                    /*table.append(row3);*/
                     table.prependTo('#${sparklineContainerID}');
             
                 }
