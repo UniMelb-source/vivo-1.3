@@ -74,6 +74,8 @@
 				<#-- Links -->  
 				<@vp.webpages propertyGroups editable "individual-urls-people" />
 
+				<br>
+
 				<nav role="navigation">
 					<#if ( individualImage?contains('<img class="individual-photo"') )>
 						<#assign infoClass = 'class="withThumb"'/>
