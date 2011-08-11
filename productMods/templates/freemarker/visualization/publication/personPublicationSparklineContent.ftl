@@ -146,7 +146,7 @@
                                     */
                                     var totalPubs = onlyUnknownYearPublications ? unknownYearPublicationCounts : renderedShortSparks;
 
-                                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs + " in the last 10 full").css("font-weight", "bold").css("font-size",".85em").attr("class", "grey sparkline_text");
+                                    $('#${sparklineContainerID} td.sparkline_number').text(totalPubs + " in the last 10 full").css("font-weight", "bold").css("font-size",".75em").attr("class", "grey sparkline_text");
 
                                     var sparksText = totalPubs + " in the last 10 full years";
 

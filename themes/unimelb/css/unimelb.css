@@ -173,7 +173,7 @@ strong, th {
   font-weight: bold; }
 
 td, td img {
-  vertical-align: top; }
+  vertical-align: middle; }
 
 sub {
   vertical-align: sub;
