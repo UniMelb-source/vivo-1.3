@@ -114,8 +114,8 @@ ul#individual-tools-people li {
 }
 ul.individual-urls-people {
     clear: both;
-    list-style-type: circle;
-    padding-left: 24px;
+    /*list-style-type: circle;
+    padding-left: 24px;*/
 }
 ul.individual-urls-people li {
     font-size: .875em;
@@ -208,10 +208,10 @@ ul#individual-personInPosition {
     padding-left: 20px;
 }
 ul#individual-personInPosition li {
-    line-height: 1em;
+    /*line-height: 1em;*/
 }
 ul#individual-personInPosition li:last-child {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 /* <------ RESEARCH AREA */

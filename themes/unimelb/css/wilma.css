@@ -1265,7 +1265,7 @@ ul.individual-urls li a {
     /*color: #2485AE;*/
 }
 ul.individual-urls-people {
-    list-style: url(../../../images/individual/arrow-grey.gif);
+    /*list-style: url(../../../images/individual/arrow-grey.gif);*/
 }
 ul.individual-urls-people li a {
     /*color: #2485AE;*/
@@ -1298,7 +1298,7 @@ ul#individual-personInPosition {
     list-style: url("../../../images/individual/arrow-green.gif");
 }
 ul#individual-personInPosition li {
-    line-height: 1.8em;
+    /*line-height: 1.8em;*/
 }
 ul#individual-personInPosition li a {
     /*color: #2485AE;*/

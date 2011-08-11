@@ -157,7 +157,7 @@ a:hover {
   color: #036; }
 
 ul, ol {
-  margin-left: 1.8em; }
+  /*margin-left: 1.8em;*/ }
 
 ol {
   list-style-type: decimal; }
@@ -665,7 +665,7 @@ body.home #main-content > h2 {
 
 h1,
 .pullquote {
-  font-size: 18px;
+  font-size: 24px;
   color: #003366;
   /*clear: both;*/
   padding: 10px 0px 3px;
@@ -673,7 +673,7 @@ h1,
   font-weight: bold; }
 
 .pullquote {
-  font-size: 18px; }
+  font-size: 24px; }
 
 /*h2 {
   font-size: 20px;
@@ -775,7 +775,7 @@ a {
 
 /*  List styles */
 ul, ol {
-  margin: 10px 0px 10px 0px;
+  /*margin: 10px 0px 10px 0px;*/
   /*padding: 0px 0px 0px 20px;*/
 }
 
