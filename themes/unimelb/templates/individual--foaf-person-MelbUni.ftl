@@ -48,21 +48,22 @@
 
 					<div id="photo-wrapper">${individualImage}</div>		
 
-					<h2>
-		                <#--  Display preferredTitle if it exists; otherwise mostSpecificTypes -->
-		                <#assign title = propertyGroups.pullProperty("${core}preferredTitle")!>
-		                <#if title?has_content> <#-- true when the property is in the list, even if not populated (when editing) -->
-		                    <@p.addLinkWithLabel title editable />
-		                    <#list title.statements as statement>
-		                        <span class="display-title">${statement.value}</span>
-		                        <@p.editingLinks "${title.name}" statement editable />
-		                    </#list>
-		                </#if>
-		                <#-- If preferredTitle is unpopulated, display mostSpecificTypes -->
-		                <#if ! (title.statements)?has_content>
-		                    <@p.mostSpecificTypes individual />
-		                </#if>                        
-		            </h2>
+					<nav role="navigation">
+						<#if ( individualImage?contains('<img class="individual-photo"') )>
+							<#assign infoClass = 'class="withThumb"'/>
+						</#if>
+			
+						<ul id ="individual-tools-people" role="list">
+							<li role="listitem"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon"/></li>
+	
+							<#assign rdfUrl = individual.rdfUrl>
+							<#if rdfUrl??>
+							    <li role="listitem"><a title="View this individual in RDF format" class="icon-rdf" href="${rdfUrl}">RDF</a></li>
+							</#if>
+							
+							<@qr.renderCode />
+						</ul>
+					</nav>					
 		        </#if>
 		           
 		        <#-- Positions -->
@@ -73,25 +74,7 @@
 
 				<#-- Links -->  
 				<@vp.webpages propertyGroups editable "individual-urls-people" />
-
-				<br>
-
-				<nav role="navigation">
-					<#if ( individualImage?contains('<img class="individual-photo"') )>
-						<#assign infoClass = 'class="withThumb"'/>
-					</#if>
-			
-					<ul id ="individual-tools-people" role="list">
-					    <li role="listitem"><img id="uriIcon" title="${individual.uri}" class="middle" src="${urls.images}/individual/uriIcon.gif" alt="uri icon"/></li>
-	
-					    <#assign rdfUrl = individual.rdfUrl>
-					    <#if rdfUrl??>
-					        <li role="listitem"><a title="View this individual in RDF format" class="icon-rdf" href="${rdfUrl}">RDF</a></li>
-					    </#if>
-					    
-					    <@qr.renderCode />
-					</ul>
-				</nav> 
+ 
 		    </header> 
 		</div>        
    
