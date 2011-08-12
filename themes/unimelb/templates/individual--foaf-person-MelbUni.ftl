@@ -63,7 +63,9 @@
 							
 							<@qr.renderCode />
 						</ul>
-					</nav>					
+					</nav>
+
+					<br><br>					
 
 		        </#if>
 		           
