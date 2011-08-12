@@ -780,7 +780,7 @@ ul, ol {
 }
 
 ul li, ol li {
-  margin-bottom: 5px; }
+  /*margin-bottom: 5px;*/ }
 
 ul li p, ol li p {
   margin-bottom: 0px; }

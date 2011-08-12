@@ -110,7 +110,8 @@ ul#individual-tools-people li {
     display: block;
     padding-right: 7px;
     float: left;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+	margin-top: 5px;
 }
 ul.individual-urls-people {
     clear: both;

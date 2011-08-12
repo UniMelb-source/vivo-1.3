@@ -64,6 +64,7 @@
 							<@qr.renderCode />
 						</ul>
 					</nav>					
+
 		        </#if>
 		           
 		        <#-- Positions -->
