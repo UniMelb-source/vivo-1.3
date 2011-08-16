@@ -1,2 +1,5 @@
 deploy.properties
 .build
+nbbuild.xml
+nbproject/
+productMods/META-INF/
