@@ -841,7 +841,7 @@ form input,
 form textarea,
 form select {
   padding: 5px;
-  margin: 0px 0px 6px;
+  /*margin: 0px 0px 6px;*/
   max-width: 100%; }
 
 form select {
