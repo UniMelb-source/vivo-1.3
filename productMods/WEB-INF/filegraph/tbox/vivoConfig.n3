@@ -1,0 +1,496 @@
+@prefix scires:  <http://vivoweb.org/ontology/scientific-research#> .
+@prefix for:     <http://purl.org/asc/1297.0/2008/for/> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl:    <http://www.w3.org/2003/11/swrl#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcelem:  <http://purl.org/dc/elements/1.1/> .
+@prefix ands:    <http://purl.org/ands/ontologies/vivo/> .
+@prefix ex:      <http://esrc.unimelb.edu.au/0.1/ProdWorkflowVersion10#> .
+@prefix pvs:     <http://vivoweb.org/ontology/provenance-support#> .
+@prefix geo:     <http://aims.fao.org/aos/geopolitical.owl#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix w:       <http://vitro.mannlib.cornell.edu/ns/vitro/rdfIngestWorkflow#> .
+@prefix s:       <http://vitro.mannlib.cornell.edu/ns/vitro/0.7/sparql#> .
+@prefix bibo:    <http://purl.org/ontology/bibo/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix swrlb:   <http://www.w3.org/2003/11/swrlb#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix core:    <http://vivoweb.org/ontology/core#> .
+@prefix seo:     <http://purl.org/asc/1297.0/2008/seo/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix ero:     <http://purl.obolibrary.org/obo/> .
+
+ands:ResearchData rdfs:subClassOf
+		[ 	a owl:Restriction ;
+			owl:allValuesFrom core:GeographicRegion ;
+			owl:onProperty core:geographicFocus
+		] ;
+	rdfs:subClassOf
+		[ 	a owl:Restriction ;
+			owl:allValuesFrom core:DateTimeInterval ;
+			owl:onProperty core:dateTimeInterval
+		] ;
+	rdfs:subClassOf
+		[ 	a owl:Restriction ;
+			owl:allValuesFrom core:URLLink ;
+			owl:onProperty core:webpage
+		] .
+
+#--------------------------------------------------
+
+ands:dateValid
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:endPublicationDate
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:dateModified
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:startPublicationDate
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:dateAvailable
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:dateSubmitted
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:dateIssued
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:dateAccepted
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:dateCreated
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+ands:date
+      vitro:customEntryFormAnnot
+              "dateTimeValueForm.jsp"^^xsd:string .
+
+#------------------------------------------
+
+ands:associatedSupervisor
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:isParticipantIn
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:streetAddressFor
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:citAPA
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:postalAddress
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:ean13
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:dateValid
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:hasMember
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaffiliation> .
+
+ands:istc
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:isLocationFor
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:hasResearchData
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:produces
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:isOperatedOnBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:endPublicationDate
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:dateSubmitted
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:associatedPrincipleInvestigator
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:ark
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:significanceStatement
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+ands:arc
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:urn
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:harvests
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:kml
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:isManagedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+ands:harvestedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:iso31662
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:hasOutput
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:isSupportedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:deliveryMethod
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:supports
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:groupDescription
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:isFundedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:isCollectorOf
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:hasValueAddedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:upc
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:citCSE
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:dateOfPublication
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:citACS
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:iso31661
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:enriches
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:gmlKmlPolyCoords
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:hasParticipant
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:isLocatedIn
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:relatedResearchData
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:hasCollector
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:ands
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:citChicago
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:citDatacite
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:wsdl
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:isMemberOf
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaffiliation> .
+
+ands:isOutputOf
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:isil
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:startPublicationDate
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:isPresentedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:dateCreated
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:isDescribedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:doi
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:operatesOn
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:makesAvailable
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:citAMA
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:isOwnedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaddress> .
+
+ands:isEnrichedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:citIEEE
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:dateModified
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:gpx
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:uri
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:hasAssociationWith
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaffiliation> .
+
+ands:citAGLC
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:hasDerivedCollection
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:addsValueTo
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:isManagerOf
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:presents
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:publishedIn
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:lissn
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:citHarvard
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:citAgpsAGIMO
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:citVancouver
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:isAvailableThrough
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:infouri
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:dateAccepted
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:purl
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:rights
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibobscure> .
+
+ands:abn
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:isFunderOf
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:dateAvailable
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:dateIssued
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
+
+ands:gml
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:streetAddress
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:isDerivedFrom
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:hasPointOfContact
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaddress> .
+
+ands:kmlPolyCoords
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:handle
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:isProducedBy
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoutreach> .
+
+ands:dcmiPoint
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:nla
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:researchDataDescription
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupoverview> .
+
+ands:citMLA
+      vitro:inPropertyGroupAnnot
+              <http://vivo.library.cornell.edu/ns/0.1#n7407> .
+
+ands:iso19139dcmiBox
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouplocation> .
+
+ands:isOwnerOf
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupresearch> .
+
+ands:relatedInformationResource
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:describes
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupbibliographiconline> .
+
+ands:local
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupidentifiers> .
+
+ands:isPointOfContactFor
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGroupaddress> .
+
+ands:date
+      vitro:inPropertyGroupAnnot
+              <http://vivoweb.org/ontology#vitroPropertyGrouptime> .
